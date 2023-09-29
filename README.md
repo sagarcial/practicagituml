@@ -7,4 +7,4 @@ las cartas numericas suman su valor, las figuras como _"J,Q,K"_ suman 10 y el az
 no excede el valor de 21 de lo contrario solo suma 1.
 - Diagrama de clases
 - Diagrama de casos de uso
--Diagrama de Secuencia
+- Diagrama de Secuencia
