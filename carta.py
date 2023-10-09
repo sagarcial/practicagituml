@@ -13,9 +13,3 @@ class Carta:
     def mostrar_carta(self):
         return self.pinta, self.valor
     
-class CartaFrancesa(Carta):
-    pass
-
-class CartaEspanola(Carta):
-    pass
-        
