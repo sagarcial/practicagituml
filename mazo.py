@@ -1,13 +1,14 @@
 from carta import *
 from random import shuffle
-
 class Mazo:
-    def __init__(self, jugador = False):
+    def __init__(self,jugador = False):
         if jugador:
             self.cartas = []
         else:
-            self.cartas = [Carta(v, p) for v in [str(x) for x in range(2,11)] + ['A', 'J', 'Q', 'K'] 
-                           for p in self.pintas] 
+            #INSTANCIAMOS CARTA
+            self.cartas = [Carta(v, p) for v in [str(x) for x in range (2, 11)] + 
+            ['A', 'J', 'Q', 'K'] for p in self.pintas] 
+
             shuffle(self.cartas)
 
     def mostrar_cartas(self):
@@ -21,7 +22,7 @@ class Mazo:
             valor += c.obtener_valor()
             if c.valor == 'A':
                 con_as = True
-        if con_as and valor <= 11:
+        if con_as and valor < 11:
             valor += 10
         return valor
     
@@ -29,13 +30,12 @@ class Mazo:
         return self.cartas.pop(0)
 
 class MazoFrances(Mazo):
-    def __init__(self, jugador=False):
+    def __init__(self,jugador = False):
         self.pintas = ['Diamantes', 'Corazones', 'Picas', 'Treboles']
         super().__init__(jugador)
 
-
 class MazoEspanol(Mazo):
-    def __init__(self, jugador=False):
+    def __init__(self,jugador = False):
         self.pintas = ['Bastos', 'Espadas', 'Monedas', 'Copas']
         super().__init__(jugador)
 
@@ -44,7 +44,6 @@ if __name__ == '__main__':
     jugador = Mazo(True)
     jugador.cartas.append(mazo.entregar_carta())
     jugador.cartas.append(mazo.entregar_carta())
-    jugador.cartas.append(mazo.entregar_carta())
-    
+
     jugador.mostrar_cartas()
     print(jugador.obtener_valor_mazo())
