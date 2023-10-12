@@ -1,7 +1,7 @@
 # Ventiuna
 - Santiago Alexander Garcia Liscano Código 20231020189 
 - Andres Esteban Rodriguez Avila Código 20231020088
-El juego de 21 es un juego de cartas con una o mas barajas
+- El juego de 21 es un juego de cartas con una o mas barajas
 En esta version simularemos un 21 de un jugador vs el repartidor.
 El repartidor estara obliado a pedir cartas hasta igualar al jugador y solo se plantara cuando lo iguale o supere.
 El jugador solo podra ganar si tiene mejor puntaje que el repartidor pero sin pasarse de 21.
